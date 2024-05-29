@@ -29,3 +29,5 @@ userSchema.pre("save", async function (next) {
 userSchema.index({ id: 1, email: 1});
 
 const User = mongoose.model("User", userSchema);
+
+export default User;
