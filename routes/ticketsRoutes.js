@@ -1,22 +1,32 @@
 import express from "express";
 import Ticket from "../models/Ticket.js";
+import auth from "../middlewares/auth.js";
+import admin from "../middlewares/admin.js";
 
 const router = express.Router();
 
-// GET /api/tickets/
+// GET /api/tickets?page=1&pageSize=10
 router.get("/", async (req, res) => {
+  const pageSize = parseInt(req.query.pageSize) || 5;
+  const page = parseInt(req.query.page) || 1;
   try {
-    const tickets = await Ticket.find({});
-    res.status(200).json({ tickets: tickets });
+    const tickets = await Ticket
+      .find()
+      .skip((page-1) * pageSize)
+      .limit(pageSize);
+
+    const total = await Ticket.countDocuments();
+    
+    res.status(200).json({ tickets, currentPage: page, pages: Math.ceil(total/pageSize) });
   } catch (err) {
     res.status(500).send({ message: "Server Error" + err.message });
   }
 });
 
 // POST /api/tickets/
-router.post("/", async (req, res) => {
+router.post("/", auth, async (req, res) => {
   const ticket = new Ticket({
-    user: req.body.userId,
+    user: req.user._id,
     title: req.body.title,
     description: req.body.description,
     priority: req.body.priority,
@@ -46,7 +56,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // PUT /api/tickets/:id
-router.put("/:id", async (req, res) => {
+router.put("/:id", auth, async (req, res) => {
   const updates = req.body;
   try {
     const ticket = await Ticket.findByIdAndUpdate(req.params.id, updates, {
@@ -63,9 +73,9 @@ router.put("/:id", async (req, res) => {
 });
 
 // DELETE /api/tickets/:id
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", [auth, admin], async (req, res) => {
   try {
-    const ticket = await Ticket.findByUdAndDelete(req.params.id);
+    const ticket = await Ticket.findOneAndDelete({id: req.params.id});
     if (!ticket) {
       return res.status(404).json({ message: "Ticket not found" });
     }
