@@ -2,28 +2,28 @@ import express from "express";
 import Ticket from "../models/Ticket.js";
 import auth from "../middlewares/auth.js";
 import admin from "../middlewares/admin.js";
+import buildFilter from "../middlewares/filter.js";
+import paginate from "../middlewares/paginate.js"
 
 const router = express.Router();
 
-// GET /api/tickets?page=1&pageSize=10
-router.get("/", async (req, res) => {
-  const pageSize = parseInt(req.query.pageSize) || 5;
-  const page = parseInt(req.query.page) || 1;
-  try {
-    const tickets = await Ticket
-      .find()
-      .skip((page-1) * pageSize)
-      .limit(pageSize);
+// GET all tickets
+// GET /api/tickets
+// GET /api/tickets?pageSize=10&page=1
+// GET /api/tickets?status=open&priority=high
+// GET /api/tickets?search=bug
+// public
 
-    const total = await Ticket.countDocuments();
-    
-    res.status(200).json({ tickets, currentPage: page, pages: Math.ceil(total/pageSize) });
-  } catch (err) {
-    res.status(500).send({ message: "Server Error" + err.message });
-  }
+router.get("/", buildFilter, paginate(Ticket), async (req, res) => {
+  res.status(200).json(req.paginatedResults);
 });
 
+
+// Create a Ticket
 // POST /api/tickets/
+// Private (only logged users)
+// Ticket Schema: user, title, desciption, priority, satus
+
 router.post("/", auth, async (req, res) => {
   const ticket = new Ticket({
     user: req.user._id,
@@ -41,7 +41,10 @@ router.post("/", auth, async (req, res) => {
   }
 });
 
+// Get a ticket by uid
 // GET /api/tickets/:id
+// Public
+
 router.get("/:id", async (req, res) => {
   try {
     const ticket = await Ticket.findOne({ id: req.params.id });
@@ -55,7 +58,12 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+
+// Update a ticket by uid
 // PUT /api/tickets/:id
+// Private (only logged users)
+// Ticket Schema: user, title, desciption, priority, satus
+
 router.put("/:id", auth, async (req, res) => {
   const updates = req.body;
   try {
@@ -72,7 +80,10 @@ router.put("/:id", auth, async (req, res) => {
   }
 });
 
+// Delete a ticket by id
 // DELETE /api/tickets/:id
+// Private (anly ADMIN)
+
 router.delete("/:id", [auth, admin], async (req, res) => {
   try {
     const ticket = await Ticket.findOneAndDelete({id: req.params.id});
