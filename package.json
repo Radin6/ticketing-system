@@ -20,8 +20,14 @@
     "winston": "^3.13.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "babel-jest": "^29.7.0",
     "dotenv": "^16.4.5",
+    "jest": "^29.7.0",
+    "joi": "^17.13.1",
     "morgan": "^1.10.0",
-    "standard": "^17.1.0"
+    "standard": "^17.1.0",
+    "supertest": "^7.0.0"
   }
 }
