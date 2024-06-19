@@ -1,0 +1,256 @@
+{
+  metadata: SyntaxError: Expected property name or '}' in JSON at position 1
+      at JSON.parse (<anonymous>)
+      at parse (/home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/types/json.js:92:19)
+      at /home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/read.js:128:18
+      at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+      at invokeCallback (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:238:16)
+      at done (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:227:7)
+      at IncomingMessage.onEnd (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:287:7)
+      at IncomingMessage.emit (node:events:518:28)
+      at endReadableNT (node:internal/streams/readable:1696:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{,\n' +
+      '  "user": "c8a502f9-16e2-4da3-ad60-f69a0a915486"\n' +
+      '  "title": "Ticket #15",\n' +
+      '  "description": "This is a new ticket description"\n' +
+      '}',
+    type: 'entity.parse.failed'
+  },
+  level: 'error',
+  message: "Expected property name or '}' in JSON at position 1",
+  timestamp: '2024-06-19T08:18:07.746Z'
+}
+{
+  metadata: SyntaxError: Expected property name or '}' in JSON at position 1
+      at JSON.parse (<anonymous>)
+      at parse (/home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/types/json.js:92:19)
+      at /home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/read.js:128:18
+      at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+      at invokeCallback (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:238:16)
+      at done (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:227:7)
+      at IncomingMessage.onEnd (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:287:7)
+      at IncomingMessage.emit (node:events:518:28)
+      at endReadableNT (node:internal/streams/readable:1696:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{,\n' +
+      '  "user": "c8a502f9-16e2-4da3-ad60-f69a0a915486",\n' +
+      '  "title": "Ticket #15",\n' +
+      '  "description": "This is a new ticket description"\n' +
+      '}',
+    type: 'entity.parse.failed'
+  },
+  level: 'error',
+  message: "Expected property name or '}' in JSON at position 1",
+  timestamp: '2024-06-19T08:18:31.874Z'
+}
+{
+  metadata: SyntaxError: Expected property name or '}' in JSON at position 1
+      at JSON.parse (<anonymous>)
+      at parse (/home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/types/json.js:92:19)
+      at /home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/read.js:128:18
+      at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+      at invokeCallback (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:238:16)
+      at done (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:227:7)
+      at IncomingMessage.onEnd (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:287:7)
+      at IncomingMessage.emit (node:events:518:28)
+      at endReadableNT (node:internal/streams/readable:1696:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{,\n' +
+      '  "user": "c8a502f9-16e2-4da3-ad60-f69a0a915486",\n' +
+      '  "title": "Ticket #15",\n' +
+      '  "description": "This is a new ticket description"\n' +
+      '}',
+    type: 'entity.parse.failed'
+  },
+  level: 'error',
+  message: "Expected property name or '}' in JSON at position 1",
+  timestamp: '2024-06-19T08:18:36.588Z'
+}
+{
+  metadata: SyntaxError: Expected property name or '}' in JSON at position 1
+      at JSON.parse (<anonymous>)
+      at parse (/home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/types/json.js:92:19)
+      at /home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/read.js:128:18
+      at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+      at invokeCallback (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:238:16)
+      at done (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:227:7)
+      at IncomingMessage.onEnd (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:287:7)
+      at IncomingMessage.emit (node:events:518:28)
+      at endReadableNT (node:internal/streams/readable:1696:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{,\n' +
+      '  "user": "c8a502f9-16e2-4da3-ad60-f69a0a915486",\n' +
+      '  "title": "Ticket #15",\n' +
+      '  "description": "This is a new ticket description"\n' +
+      '}',
+    type: 'entity.parse.failed'
+  },
+  level: 'error',
+  message: "Expected property name or '}' in JSON at position 1",
+  timestamp: '2024-06-19T08:19:17.687Z'
+}
+{
+  metadata: SyntaxError: Expected property name or '}' in JSON at position 1
+      at JSON.parse (<anonymous>)
+      at parse (/home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/types/json.js:92:19)
+      at /home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/read.js:128:18
+      at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+      at invokeCallback (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:238:16)
+      at done (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:227:7)
+      at IncomingMessage.onEnd (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:287:7)
+      at IncomingMessage.emit (node:events:518:28)
+      at endReadableNT (node:internal/streams/readable:1696:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{,\n' +
+      '  "user": "c8a502f9-16e2-4da3-ad60-f69a0a915486",\n' +
+      '  "title": "Ticket #15",\n' +
+      '  "description": "This is a new ticket description"\n' +
+      '}',
+    type: 'entity.parse.failed'
+  },
+  level: 'error',
+  message: "Expected property name or '}' in JSON at position 1",
+  timestamp: '2024-06-19T08:19:55.368Z'
+}
+{
+  metadata: SyntaxError: Expected property name or '}' in JSON at position 1
+      at JSON.parse (<anonymous>)
+      at parse (/home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/types/json.js:92:19)
+      at /home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/read.js:128:18
+      at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+      at invokeCallback (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:238:16)
+      at done (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:227:7)
+      at IncomingMessage.onEnd (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:287:7)
+      at IncomingMessage.emit (node:events:518:28)
+      at endReadableNT (node:internal/streams/readable:1696:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{,\n' +
+      '  "user": "282d29ee-de97-4814-bf70-7ffeabd991ab",\n' +
+      '  "title": "Ticket #18",\n' +
+      '  "description": "This is a new ticket description"\n' +
+      '}',
+    type: 'entity.parse.failed'
+  },
+  level: 'error',
+  message: "Expected property name or '}' in JSON at position 1",
+  timestamp: '2024-06-19T08:23:11.250Z'
+}
+{
+  metadata: SyntaxError: Expected property name or '}' in JSON at position 1
+      at JSON.parse (<anonymous>)
+      at parse (/home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/types/json.js:92:19)
+      at /home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/read.js:128:18
+      at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+      at invokeCallback (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:238:16)
+      at done (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:227:7)
+      at IncomingMessage.onEnd (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:287:7)
+      at IncomingMessage.emit (node:events:518:28)
+      at endReadableNT (node:internal/streams/readable:1696:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{,\n' +
+      '  "title": "Ticket #18",\n' +
+      '  "description": "This is a new ticket description"\n' +
+      '}',
+    type: 'entity.parse.failed'
+  },
+  level: 'error',
+  message: "Expected property name or '}' in JSON at position 1",
+  timestamp: '2024-06-19T08:23:50.477Z'
+}
+{
+  metadata: SyntaxError: Expected property name or '}' in JSON at position 1
+      at JSON.parse (<anonymous>)
+      at parse (/home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/types/json.js:92:19)
+      at /home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/read.js:128:18
+      at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+      at invokeCallback (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:238:16)
+      at done (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:227:7)
+      at IncomingMessage.onEnd (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:287:7)
+      at IncomingMessage.emit (node:events:518:28)
+      at endReadableNT (node:internal/streams/readable:1696:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{,\n' +
+      '  "title": "Ticket #18",\n' +
+      '  "description": "This is a new ticket description"\n' +
+      '}',
+    type: 'entity.parse.failed'
+  },
+  level: 'error',
+  message: "Expected property name or '}' in JSON at position 1",
+  timestamp: '2024-06-19T08:26:12.206Z'
+}
+{
+  metadata: SyntaxError: Expected property name or '}' in JSON at position 1
+      at JSON.parse (<anonymous>)
+      at parse (/home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/types/json.js:92:19)
+      at /home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/read.js:128:18
+      at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+      at invokeCallback (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:238:16)
+      at done (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:227:7)
+      at IncomingMessage.onEnd (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:287:7)
+      at IncomingMessage.emit (node:events:518:28)
+      at endReadableNT (node:internal/streams/readable:1696:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{,\n' +
+      '  "title": "Ticket #18",\n' +
+      '  "description": "This is a new ticket description"\n' +
+      '}',
+    type: 'entity.parse.failed'
+  },
+  level: 'error',
+  message: "Expected property name or '}' in JSON at position 1",
+  timestamp: '2024-06-19T08:26:52.143Z'
+}
+{
+  metadata: SyntaxError: Expected property name or '}' in JSON at position 1
+      at JSON.parse (<anonymous>)
+      at parse (/home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/types/json.js:92:19)
+      at /home/nicor/workspace/ticketing-system/node_modules/body-parser/lib/read.js:128:18
+      at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+      at invokeCallback (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:238:16)
+      at done (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:227:7)
+      at IncomingMessage.onEnd (/home/nicor/workspace/ticketing-system/node_modules/raw-body/index.js:287:7)
+      at IncomingMessage.emit (node:events:518:28)
+      at endReadableNT (node:internal/streams/readable:1696:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{,\n' +
+      '  "title": "Ticket #18",\n' +
+      '  "description": "This is a new ticket description"\n' +
+      '}',
+    type: 'entity.parse.failed'
+  },
+  level: 'error',
+  message: "Expected property name or '}' in JSON at position 1",
+  timestamp: '2024-06-19T08:27:01.236Z'
+}

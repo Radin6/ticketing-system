@@ -4,6 +4,7 @@ import auth from "../middlewares/auth.js";
 import admin from "../middlewares/admin.js";
 import buildFilter from "../middlewares/filter.js";
 import paginate from "../middlewares/paginate.js"
+import ticketSchema from "../validations/ticketValidation.js";
 
 const router = express.Router();
 
@@ -25,6 +26,15 @@ router.get("/", buildFilter, paginate(Ticket), async (req, res) => {
 // Ticket Schema: user, title, desciption, priority, satus
 
 router.post("/", auth, async (req, res) => {
+
+  const { error } = ticketSchema.validate(req.body);
+
+  if (error) {
+    return res.status(400).json({
+      message: error.details[0].message
+    })
+  }
+
   const ticket = new Ticket({
     user: req.user._id,
     title: req.body.title,
