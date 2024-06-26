@@ -5,5 +5,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjcyOTRkY
 {
   "user": "282d29ee-de97-4814-bf70-7ffeabd991ab",
   "title": "Ticket #18",
-  "description": "This is a new ticket description"
+  "description": "This is a new ticket description",
+  "priority": "low"
 }
