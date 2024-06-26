@@ -1,1 +1,0 @@
-GET http://localhost:4000/api/tickets?pageSize=3&page=2 HTTP/1.1

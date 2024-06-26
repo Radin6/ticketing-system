@@ -1,3 +1,0 @@
-DELETE http://localhost:4000/api/tickets/ee55fc7d-e7c2-4eda-9f1b-780a1fbd9e89 HTTP/1.1
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjYyYmMxMDE1NjFiMmYxYjEwNzk5YTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTc3NDk3MjgsImV4cCI6MTcxNzc1MzMyOH0.Hsmiu6BIWQdPVC6JwGZQWh9RCpVkgUcvV7H_N2q3-hI
