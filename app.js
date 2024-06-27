@@ -19,6 +19,7 @@ mongoose.connect(DB_URL)
   .then(()=> console.log(`Connected to DB: ${DB_URL}`))
   .catch((error)=> console.log("Failed to connect to Mongo DB with: ", error));
 
+app.set('trust proxy', 1);
 app.use(morgan("dev"));
 app.use(helmet());
 app.use(cors());

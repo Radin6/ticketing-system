@@ -1,9 +1,10 @@
+import 'dotenv/config';
 import mongoose from "mongoose";
 import User from "../models/User.js";
 import Ticket from "../models/Ticket.js";
 
 // Connect to the local database
-mongoose.connect('mongodb://localhost:27017/ticketing-db')
+mongoose.connect(process.env.DB_URL)
   .then(() => console.log('Connected to DB'))
   .catch(error => console.log("failed to connect to the DB",error))
 
