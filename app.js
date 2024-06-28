@@ -16,7 +16,7 @@ const DB_URL = (process.env.NODE_ENV === "test"
   : process.env.DB_URL || "mongodb://localhost:27017/ticketing-db");
 
 mongoose.connect(DB_URL)
-  .then(()=> console.log(`Connected to DB: ${DB_URL}`))
+  .then(()=> console.log(`Connected to DB: ${process.env.DB_URL ? "MongoDB Atlas" : DB_URL}`))
   .catch((error)=> console.log("Failed to connect to Mongo DB with: ", error));
 
 app.set('trust proxy', 1);
