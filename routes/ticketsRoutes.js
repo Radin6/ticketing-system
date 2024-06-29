@@ -36,7 +36,8 @@ router.post("/", auth, async (req, res) => {
   }
 
   const ticket = new Ticket({
-    user: req.user._id,
+    userId: req.user.userId,
+    ticketId: req.user.ticketId,
     title: req.body.title,
     description: req.body.description,
     priority: req.body.priority,
@@ -52,12 +53,12 @@ router.post("/", auth, async (req, res) => {
 });
 
 // Get a ticket by uid
-// GET /api/tickets/:id
+// GET /api/tickets/:ticketId
 // Public
 
-router.get("/:id", async (req, res) => {
+router.get("/:ticketId", async (req, res) => {
   try {
-    const ticket = await Ticket.findOne({ id: req.params.id });
+    const ticket = await Ticket.findOne({ ticketId: req.params.ticketId });
     if (!ticket) {
       return res.status(404).json({ message: "Ticket not found" });
     }
@@ -70,14 +71,14 @@ router.get("/:id", async (req, res) => {
 
 
 // Update a ticket by uid
-// PUT /api/tickets/:id
+// PUT /api/tickets/:ticketId
 // Private (only logged users)
 // Ticket Schema: user, title, desciption, priority, satus
 
-router.put("/:id", auth, async (req, res) => {
+router.put("/:ticketId", auth, async (req, res) => {
   const updates = req.body;
   try {
-    const ticket = await Ticket.findByIdAndUpdate(req.params.id, updates, {
+    const ticket = await Ticket.findByIdAndUpdate(req.params.ticketId, updates, {
       new: true,
     });
     if (!ticket) {
@@ -91,12 +92,12 @@ router.put("/:id", auth, async (req, res) => {
 });
 
 // Delete a ticket by id
-// DELETE /api/tickets/:id
+// DELETE /api/tickets/:ticketId
 // Private (anly ADMIN)
 
-router.delete("/:id", [auth, admin], async (req, res) => {
+router.delete("/:ticketId", [auth, admin], async (req, res) => {
   try {
-    const ticket = await Ticket.findOneAndDelete({id: req.params.id});
+    const ticket = await Ticket.findOneAndDelete({ticketId: req.params.ticketId});
     if (!ticket) {
       return res.status(404).json({ message: "Ticket not found" });
     }

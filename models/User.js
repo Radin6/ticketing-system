@@ -3,7 +3,7 @@ import {v4 as uuidv4} from "uuid";
 import bcrypt from "bcrypt";
 
 const userSchema = new mongoose.Schema({
-  id: { type: String, default: uuidv4, required: true, unique: true },
+  userId: { type: String, default: uuidv4, required: true, unique: true },
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true, lowercase: true, trim: true },
   password: { type: String, required: true, minLenght: 8},
@@ -26,7 +26,7 @@ userSchema.pre("save", async function (next) {
   this.password = await bcrypt.hash(this.password, salt);
 })
 
-userSchema.index({ id: 1, email: 1});
+userSchema.index({ userId: 1, email: 1});
 
 const User = mongoose.model("User", userSchema);
 

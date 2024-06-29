@@ -3,8 +3,8 @@ import { v4 as uuidv4 } from "uuid";
 
 const ticketSchema = new mongoose.Schema(
   {
-    id: { type: String, default: uuidv4, required: true },
-    user: { type: String, required: true },
+    ticketId: { type: String, default: uuidv4, required: true },
+    userId: { type: String, required: true },
     createdAt: { type: Date, default: Date.now },
     status: {
       type: String,
@@ -26,7 +26,7 @@ const ticketSchema = new mongoose.Schema(
   }
 );
 
-ticketSchema.index({ id: 1, user: 1 });
+ticketSchema.index({ ticketId: 1, user: 1 });
 
 const Ticket = mongoose.model("Ticket", ticketSchema);
 
