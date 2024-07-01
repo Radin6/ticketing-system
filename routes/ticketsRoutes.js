@@ -52,7 +52,24 @@ router.post("/", auth, async (req, res) => {
   }
 });
 
-// Get a ticket by uid
+// Get a ticket by me
+// GET /api/tickets/me
+// Public
+
+router.get("/me", auth, async (req, res) => {
+  try {
+    const ticket = await Ticket.find({ userId: req.user.userId });
+    if (!ticket) {
+      return res.status(404).json({ message: "Ticket not found" });
+    }
+
+    res.status(200).json({ ticket: ticket });
+  } catch (err) {
+    res.status(500).json({ message: "Server Error" + err.message });
+  }
+});
+
+// Get a ticket by ticket uid
 // GET /api/tickets/:ticketId
 // Public
 
