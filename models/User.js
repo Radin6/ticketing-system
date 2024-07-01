@@ -26,7 +26,7 @@ userSchema.pre("save", async function (next) {
   this.password = await bcrypt.hash(this.password, salt);
 })
 
-userSchema.index({ userId: 1, email: 1});
+userSchema.index({ userId: 1, email: 1}, { unique: true });
 
 const User = mongoose.model("User", userSchema);
 
