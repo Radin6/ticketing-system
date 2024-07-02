@@ -62,7 +62,15 @@ router.post('/login', async (req, res) => {
     expiresIn: '1h',
   })
 
-  res.status(200).header("Authorization", token).json({ token: token });
+  res.status(200).header("Authorization", token)
+    .json({
+      user: {
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      },
+      token: token
+    });
 
 });
 

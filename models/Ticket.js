@@ -20,6 +20,8 @@ const ticketSchema = new mongoose.Schema(
       transform: function (doc, ret) {
         delete ret.__v;
         delete ret._id;
+        delete ret.id;
+        delete ret.userId;
       },
       virtuals: true,
     },
