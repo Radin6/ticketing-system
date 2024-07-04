@@ -5,6 +5,7 @@ import admin from "../middlewares/admin.js";
 import buildFilter from "../middlewares/filter.js";
 import paginate from "../middlewares/paginate.js"
 import ticketSchema from "../validations/ticketValidation.js";
+import ticketOwnerOrAdmin from "../middlewares/ticketOwnerOrAdmin.js";
 
 const router = express.Router();
 
@@ -110,9 +111,9 @@ router.put("/:ticketId", auth, async (req, res) => {
 
 // Delete a ticket by id
 // DELETE /api/tickets/:ticketId
-// Private (anly ADMIN)
+// Private (anly ADMIN or Ticket Owner)
 
-router.delete("/:ticketId", [auth, admin], async (req, res) => {
+router.delete("/:ticketId", ticketOwnerOrAdmin, async (req, res) => {
   try {
     const ticket = await Ticket.findOneAndDelete({ticketId: req.params.ticketId});
     if (!ticket) {
