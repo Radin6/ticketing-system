@@ -96,7 +96,7 @@ router.get("/:ticketId", async (req, res) => {
 router.put("/:ticketId", auth, async (req, res) => {
   const updates = req.body;
   try {
-    const ticket = await Ticket.findByIdAndUpdate(req.params.ticketId, updates, {
+    const ticket = await Ticket.findOneAndUpdate({ ticketId: req.params.ticketId }, updates, {
       new: true,
     });
     if (!ticket) {
